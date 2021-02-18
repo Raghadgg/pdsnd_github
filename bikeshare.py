@@ -61,8 +61,8 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
-    
+
+
     df = pd.read_csv(CITY_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -175,7 +175,7 @@ def user_stats(df):
         print('Earliest birth year:', earliest_year)
     except KeyError:
         print('No data available for birth year')
-  
+
     try:
         recent_year = df['Birth Year'].max()
         print('Most recent birth year:', recent_year)
@@ -191,20 +191,20 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     view_data = input('Would you like to view 5 rows of individual trip data? yes or no' + ' ')
     start_loc = 0
-    
+
     while True:
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
         view_display = input('Do you want to continue? yes or no' + ' ').lower()
         if view_display != 'yes':
             break
-    
-    
-    
-        
+
+
+
+
 
 
 def main():
@@ -225,13 +225,4 @@ def main():
 if __name__ == "__main__":
 	main()
 
-    # SOURCES:
-    # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html
-    # https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
-    # https://www.datacamp.com/community/blog/python-pandas-cheat-sheet
-    # https://www.geeksforgeeks.org/python-pandas-index-value_counts/#:~:text=Pandas%20is%20one%20of%20those,the%20most%20frequently%2Doccurring%20element.
-    # https://www.geeksforgeeks.org/python-pandas-dataframe-idxmax/
-    # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html
-    # https://stackoverflow.com/questions/3754620/what-does-while-true-mean-in-python#:~:text=while%20True%20means%20loop%20forever,just%20get%20used%20to%20eventually!
-    
     
