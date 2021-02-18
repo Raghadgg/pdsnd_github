@@ -5,7 +5,7 @@
 pdsnd final project: Post your work on GitHub <Explore US bikeshare Data>
 
 ### Description
-This is the third and final project of udacity's pdsnd course, that includes work done on a previous project were we explored a US bikeshare data using Python and answering questions like:
+This is the third and final project of udacity's pdsnd course, which includes work done on a previous project were we explored a US bikeshare database using Python and answering questions like:
 
 1- Popular times
 
@@ -38,5 +38,6 @@ data/washington.csv
 
 ### Credits
 
-Udacity.
+Udacity - Programming for data science program
+
 
